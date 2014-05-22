@@ -13,20 +13,32 @@ START TRANSACTION;
 INSERT INTO users_TEMP (username, password, enabled) VALUES
   ('admin','vU@1aM0K',true),
   ('srobbins','h0T1&!4u',true),
-  ('gmasters','13&czY4?',true);
+  ('gmasters','13&czY4?',true),
+  ('ssmith','xY13$80!',true),
+  ('ejohnson','Mn48#&aM',true),
+  ('mbender','Wx!2@RR4',true),
+  ('jhowell','7@3bPq%1',true);
 
 
 INSERT INTO authorities_TEMP (username, authority) VALUES
   ('admin','ROLE_ADMIN'),
   ('admin','ROLE_USER'),
   ('srobbins','ROLE_USER'),
-  ('gmasters','ROLE_USER');
+  ('gmasters','ROLE_USER'),
+  ('ssmith','ROLE_USER'),
+  ('ejohnson','ROLE_USER'),
+  ('mbender','ROLE_USER'),
+  ('jhowell','ROLE_USER');
     
 -- By default, the username column here has to match the username column in the users table, above
 INSERT INTO user_info_TEMP (sub, preferred_username, name, email, email_verified) VALUES
   ('90342.ASDFJWFA','admin','Demo Admin','admin@example.com', true),
   ('12345.ABCDEFGH','srobbins','Sally Robbins','srobbins@rhexpilot.com', true),
-  ('23456.BCDEFGHI','gmasters','Greg Masters','gmasters@rhexpilot.com', true);
+  ('23456.BCDEFGHI','gmasters','Greg Masters','gmasters@rhexpilot.com', true),
+  ('34567.CDEFGHIJ','ssmith','Steve Smith','ssmith@rhexpilot.com', true),
+  ('45678.DEFGHIJK','ejohnson','Elena Johnson','ejohnson@rhexpilot.com', true),
+  ('56789.EFGHIJKL','mbender','Matt Bender','mbender@rhexpilot.com', true),
+  ('67890.FGHIJKLM','jhowell','Jessica Howell','jhowell@rhexpilot.com', true);
  
 --
 -- Merge the temporary users safely into the database. This is a two-step process to keep users from being created on every startup with a persistent store.
