@@ -33,12 +33,12 @@ INSERT INTO authorities_TEMP (username, authority) VALUES
 -- By default, the username column here has to match the username column in the users table, above
 INSERT INTO user_info_TEMP (sub, preferred_username, name, email, email_verified) VALUES
   ('90342.ASDFJWFA','admin','Demo Admin','admin@example.com', true),
-  ('12345.ABCDEFGH','srobbins','Sally Robbins',"sallyrobbinstest9@gmail.com", true),
-  ('23456.BCDEFGHI','gmasters','Greg Masters',"gregmasterstest4@gmail.com", true),
-  ('34567.CDEFGHIJ','ssmith','Steve Smith',"stevesmithtest7@gmail.com", true),
-  ('45678.DEFGHIJK','ejohnson','Elena Johnson',"elenajohnsontest3@gmail.com", true),
-  ('56789.EFGHIJKL','mbender','Matt Bender',"mattbendertest42@gmail.com", true),
-  ('67890.FGHIJKLM','jhowell','Jessica Howell',"jessicahowelltest2@gmail.com", true);
+  ('12345.ABCDEFGH','srobbins','Sally Robbins','sallyrobbinstest9@gmail.com', true),
+  ('23456.BCDEFGHI','gmasters','Greg Masters','gregmasterstest4@gmail.com', true),
+  ('34567.CDEFGHIJ','ssmith','Steve Smith','stevesmithtest7@gmail.com', true),
+  ('45678.DEFGHIJK','ejohnson','Elena Johnson','elenajohnsontest3@gmail.com', true),
+  ('56789.EFGHIJKL','mbender','Matt Bender','mattbendertest42@gmail.com', true),
+  ('67890.FGHIJKLM','jhowell','Jessica Howell','jessicahowelltest2@gmail.com', true);
  
 --
 -- Merge the temporary users safely into the database. This is a two-step process to keep users from being created on every startup with a persistent store.
