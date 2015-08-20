@@ -45,19 +45,19 @@ Using a terminal in the project's root directory:
 
 Here are various commands that may be useful for debugging.
 
-* Build the Docker image named "hapi-fhir":
+* Build the Docker image named "openid":
 
-        $ docker build -t hapi-fhir .
+        $ docker build -t openid .
 
-* Run a new Docker container, in interactive mode, with a pseudo-tty, remove the container after exiting, forward port 8080 in the localhost to 8080 in the container, set the name to "hapi-fhir-test", and use the "hapi-fhir" image:
+* Run a new Docker container, in interactive mode, with a pseudo-tty, remove the container after exiting, forward port 8888 in the localhost to 8080 in the container, set the name to "openid-test", and use the "openid" image:
 
-        $ docker run -i -t --rm --publish=8888:8080 --name=hapi-fhir-test hapi-fhir
+        $ docker run -i -t --rm --publish=8888:8080 --name=openid-test openid
 
-* Check what ports have been forwarded for a running Docker container named "hapi-fhir-test":
+* Check what ports have been forwarded for a running Docker container named "openid-test":
 
-        $ docker port hapi-fhir-test
+        $ docker port openid-test
 
 * Get a bash shell for a running Docker container named "hapi-fhir-test":
 
-        $ docker exec -i -t hapi-fhir-test bash
+        $ docker exec -i -t openid-test bash
 
