@@ -1,7 +1,10 @@
 FROM tomcat:7-jre8
 
+# Install Ruby (needed to run Tiller)
+RUN apt-get -y update && apt-get -y install ruby
+
 # Install Tiller for configuration management
-RUN apt-get -y update && apt-get -y install ruby && gem install tiller
+RUN gem install tiller
 
 # Copy the WAR file we want to run
 COPY vha-rural-health-openid-connect/target/vha-rural-health-openid-connect-server.war ${CATALINA_HOME}/webapps/openid.war
