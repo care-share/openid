@@ -11,7 +11,7 @@ START TRANSACTION;
 -- 
 
 INSERT INTO client_details_TEMP (client_id, client_secret, client_name, dynamically_registered, refresh_token_validity_seconds, access_token_validity_seconds, id_token_validity_seconds, allow_introspection) VALUES
-	('client', 'mv42@C0n?', 'Test Client', false, null, 3600, 600, true);
+	('client', 'mv42@C0n?', 'VHA ORH CareShare', false, null, 3600, 600, true);
 
 INSERT INTO client_scope_TEMP (owner_id, scope) VALUES
 	('client', 'openid'),
@@ -22,6 +22,7 @@ INSERT INTO client_scope_TEMP (owner_id, scope) VALUES
 	('client', 'offline_access');
 
 INSERT INTO client_redirect_uri_TEMP (owner_id, redirect_uri) VALUES
+	('client', 'http://vacareshare.org/'),
 	('client', 'http://localhost/'),
 	('client', 'http://localhost:4200/');
 	
