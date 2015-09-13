@@ -18,9 +18,6 @@ RUN \
 # Copy Tiller templates and configuration
 ADD docker/tiller /etc/tiller
 
-# Copy TLS keystore, if any
-COPY docker/tls ${CATALINA_HOME}/conf/tls
-
 # Run Tiller
 CMD ["/usr/local/bin/tiller" , "-v"]
 
