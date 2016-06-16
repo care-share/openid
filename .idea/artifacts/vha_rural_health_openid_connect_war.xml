@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="vha-rural-health-openid-connect:war">
+    <output-path>$PROJECT_DIR$/vha-rural-health-openid-connect/target</output-path>
+    <root id="archive" name="vha-rural-health-openid-connect-server.war">
+      <element id="artifact" artifact-name="vha-rural-health-openid-connect:war exploded" />
+    </root>
+  </artifact>
+</component>
